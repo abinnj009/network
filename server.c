@@ -17,7 +17,7 @@ int main(int argc,char *argv[])
 	time_t ticks;
 	
 	listenfd=socket(AF_INET,SOCK_STREAM,0);//cretes unnamed socket & returns integer socket descriptor
-	memset(&serv_addr,'0',sizeof(serv_addr));
+	memset(&serv_addr,'0',sizeof(serv_addr));//fill memory with a constant byte
 	memset(sendBuff,'0',sizeof(sendBuff));
 
 	serv_addr.sin_family= AF_INET;
